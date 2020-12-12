@@ -10,6 +10,9 @@ php7.3 php7.3-fpm php7.3-mysql php-common php7.3-cli php7.3-common php7.3-json p
 #RUN wget https://wordpress.org/latest.tar.gz
 
 #RUN tar -xzvf latest.tar.gz
+
+ARG autoindex=1
+ENV var_autoindex=${autoindex}
 COPY srcs/starting.sh /root
 COPY srcs/ssl.conf /etc/nginx/sites-available/localhost.conf
 COPY srcs/config.inc.php /root

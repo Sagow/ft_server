@@ -14,7 +14,7 @@ tar -xf ./wordpress.tar.gz >> /dev/null
 rm ./wordpress.tar.gz
 chown -R www-data:www-data $LOCALHOST
 
-openssm=l req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfigned.key -out /etc/ssl/certs/nginx-selfigned.crt -subj "/CN=localhost"
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt -subj "/CN=localhost"
 ln -s /etc/nginx/sites-available/localhost.conf /etc/nginx/sites-enabled/localhost.conf
 if [ "$var_autoindex" != "1" ]
 	then
