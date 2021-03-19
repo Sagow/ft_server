@@ -7,6 +7,7 @@ cd $LOCALHOST
 cp /root/phpMyAdmin.zip ./
 unzip ./phpMyAdmin.zip >> /dev/null
 cp /root/config.inc.php ./phpMyAdmin
+cp /root/index.php ./
 rm ./phpMyAdmin.zip
 
 cp /root/wordpress.tar.gz ./

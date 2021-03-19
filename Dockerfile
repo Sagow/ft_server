@@ -18,6 +18,7 @@ COPY srcs/ssl.conf /etc/nginx/sites-available/localhost.conf
 COPY srcs/config.inc.php /root
 COPY srcs/wordpress.tar.gz /root
 COPY srcs/phpMyAdmin.zip /root
+COPY srcs/index.php /root
 
 RUN chmod u+x /root/starting.sh
 
