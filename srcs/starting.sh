@@ -12,6 +12,7 @@ rm ./phpMyAdmin.zip
 
 cp /root/wordpress.tar.gz ./
 tar -xf ./wordpress.tar.gz >> /dev/null
+cp /root/wp-config.php ./wordpress
 rm ./wordpress.tar.gz
 chown -R www-data:www-data $LOCALHOST
 
