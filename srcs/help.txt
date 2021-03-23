@@ -1,0 +1,12 @@
+First you need to build, then run :
+
+sudo docker build . -t ft_server    (--build-arg autoindex=0)
+sudo docker run -ti -p81:80 -p443:443 ft_server
+
+To see the list and remove the containers :
+sudo docker ps -a
+sudo docker rm [id]
+
+To see the list and remove the images :
+sudo docker images
+sudo docker rmi [id]
